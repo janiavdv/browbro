@@ -25,9 +25,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - **Clicked URLs are no longer written to the system log in the clear.** The
-  "received URL" log line now marks the URL `.private`, so links carrying tokens
-  (password resets, magic sign-in links) show as `<private>` in Console and
-  `log show` instead of being readable by anything with log access.
+  "received URL" log line now shows only the link's host; the full URL is
+  logged as a hash, so links carrying tokens (password resets, magic sign-in
+  links) can't be read by anything with log access.
 
 ## [0.1.7] - 2026-08-27
 
