@@ -41,7 +41,7 @@ final class LinkStore {
         receivedAt = now
         history.insert(ReceivedLink(url: url, at: now), at: 0)
         if history.count > 20 { history.removeLast() }
-        linkLog.info("received URL: \(url.absoluteString, privacy: .public)")
+        linkLog.info("received URL: \(url.absoluteString, privacy: .private)")
     }
 
     func recordOpen(_ url: URL, in targetName: String) {
